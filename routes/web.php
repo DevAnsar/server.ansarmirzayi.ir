@@ -22,9 +22,7 @@ Route::middleware('auth')->prefix('admin')->as('admin.')->group(function (){
     Route::post('settings/update',[SettingController::class,'update'])->name('settings.update');
 });
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [IndexController::class,'home']);
 
 Auth::routes();
 
