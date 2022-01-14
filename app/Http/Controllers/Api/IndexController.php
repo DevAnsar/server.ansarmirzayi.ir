@@ -15,7 +15,7 @@ class IndexController extends Controller
         try{
             $jobs=Resume::orderBy('queue','asc')
                 ->select(['title','image','description','url','domain'])
-                ->take(3)->get();
+                ->take(4)->get();
 
             $contents=Setting::pluck('value','key');
 
