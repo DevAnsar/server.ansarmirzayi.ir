@@ -15,7 +15,7 @@ class IndexController extends Controller
         try{
             $jobs=Resume::orderBy('queue','asc')
                 ->select(['title','image','description','url','domain'])
-                ->take(4)->get();
+                ->get();
 
             $contents=Setting::pluck('value','key');
 
@@ -32,12 +32,13 @@ class IndexController extends Controller
         }
 
     }
-    public function all_jobs(){
+    public function jobs(Request $request){
 
         try{
+
             $jobs=Resume::orderBy('queue','asc')
                 ->select(['title','image','description','url','domain'])
-                ->get();
+                ->paginate(4);
 
             return response()->json([
                 'status'=>true,
