@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\IndexController;
 use App\Http\Controllers\Admin\ResumeController;
 use App\Http\Controllers\Admin\SettingController;
@@ -20,6 +21,7 @@ Route::middleware('auth')->prefix('admin')->as('admin.')->group(function (){
     Route::resource('resumes',ResumeController::class);
     Route::get('settings',[SettingController::class,'index'])->name('settings.index');
     Route::post('settings/update',[SettingController::class,'update'])->name('settings.update');
+    Route::resource('blogs',BlogController::class);
 });
 
 Route::get('/', [IndexController::class,'home']);

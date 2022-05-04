@@ -18,6 +18,9 @@ use Illuminate\Support\Facades\Route;
 Route::prefix('v1')->group(function (){
     Route::get('/index',[IndexController::class,'index']);
     Route::get('/jobs',[IndexController::class,'jobs']);
+    Route::get('/top-blogs',[IndexController::class,'get_top_blogs']);
+    Route::get('/blogs',[IndexController::class,'get_blogs']);
+    Route::get('/blogs/{slug}',[IndexController::class,'get_blog']);
 });
 //Route::middleware('auth:api')->get('/user', function (Request $request) {
 //    return $request->user();

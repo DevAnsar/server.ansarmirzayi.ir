@@ -17,6 +17,15 @@
                 <a class="nav-link" href="{{route('admin.resumes.create')}}"><i class="icon-people"></i>ثبت نمونه کار</a>
             </li>
 
+
+            <li class="nav-title">
+                مدیریت وبلاگ
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{route('admin.blogs.index')}}"><i class="icon-user-follow"></i>پست ها</a>
+                <a class="nav-link" href="{{route('admin.blogs.create')}}"><i class="icon-people"></i>ایجاد پست جدید</a>
+            </li>
+
             <li class="nav-title">
                 مدیریت محتوا
             </li>

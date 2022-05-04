@@ -306,10 +306,7 @@
 
 <footer class="footer">
         <span class="text-left">
-            <a href="http://coreui.io">CoreUI</a> &copy; 2016 creativeLabs.
-        </span>
-    <span class="pull-right">
-            Powered by <a href="http://coreui.io">CoreUI</a>
+            <a href="https://ansarmirzayi.ir">Ansarmirzayi.ir</a> &copy; 2022 creativeLabs.
         </span>
 </footer>
 <!-- Bootstrap and necessary plugins -->
@@ -330,7 +327,7 @@
 <script src="{{asset('js/views/main.js')}}"></script>
 
 <!-- Grunt watch plugin -->
-<script src="//localhost:35729/livereload.js"></script>
+{{--<script src="//localhost:35729/livereload.js"></script>--}}
 </body>
 
 </html>
